@@ -1,4 +1,4 @@
-package cyril.cieslak.livedatainmainactivity
+package androidviakotlin.livedatainmainactivity
 
 import org.junit.Test
 
