@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         compteur.observe(this, Observer { newValue ->
             Log.i("MainActivityValue", "New Value is : $newValue")
 
-            //  It changes the TextView with the newValue
+            //  It replaces the resultTextView value with the newValue
             resultTextView.text = "$newValue"
         })
     }
