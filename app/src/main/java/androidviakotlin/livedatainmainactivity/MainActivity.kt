@@ -9,26 +9,26 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val counter = MutableLiveData<Int>()
+    private val compteur = MutableLiveData<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        counter.value = 0
+        compteur.value = 0
 
         // Add +1 when the button is clicked
-        incrementButton.setOnClickListener {
-            counter.value = counter.value!! +1
+        plusOneButton.setOnClickListener {
+            compteur.value = compteur.value!! +1
         }
 
-        // Set up of the Observer to know when the value of the counter has changed
-        counter.observe(this, Observer { newValue ->
+        // Set up of the Observer to know when the value of the compteur has changed
+        compteur.observe(this, Observer { newValue ->
             Log.i("MainActivityValue", "New Value is : $newValue")
 
             //  It changes the TextView with the newValue
-            incrementTextView.text = "$newValue"
+            resultTextView.text = "$newValue"
         })
     }
 }
